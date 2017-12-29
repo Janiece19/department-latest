@@ -1,0 +1,70 @@
+/* .app-content
+{
+    padding:20px;
+} */
+.app-content mat-table{
+    margin:20px;
+}  
+
+ mat-table{
+    border:1px solid black;
+    align:center;
+    
+    
+} 
+/* ng-container:nth-child(even) {background-color: #f2f2f2;} */
+
+
+mat-header-row {
+    background-color: #4CAF50;
+}
+mat-header-cell{
+    color: white;
+}
+.example-card {
+  width: 400px;
+  
+}
+.float{
+    float:right;
+}
+
+.example-header-image1 {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.example-header-image2 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQXRsC8tHm32Rv7yQTU3_AiH138sRt3RCZc-le1Ovq-t6uwZXR');
+  background-size: cover;
+}
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQXRsC8tHm32Rv7yQTU3_AiH138sRt3RCZc-le1Ovq-t6uwZXR');
+  background-size: cover;
+}
+
+.example-container {
+  width: 200px;
+  height: 400px;
+  /* margin: 20px; */
+  margin-top:20px;
+  border: 1px solid #555;
+}
+
+.example-side {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+}
+
+.mat-width-nav{
+  min-width:10px;
+}
+
+/* mat-drawer{
+  width:1000px;
+  height:200px;
+} */

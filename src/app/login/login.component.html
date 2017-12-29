@@ -1,0 +1,47 @@
+
+<mat-sidenav-container>
+  <mat-sidenav  #snav mode="over">
+            <h1>Settings</h1>
+            <hr>
+            <mat-list>
+              <span><mat-icon>person</mat-icon></span>
+              <span><mat-list-item>People</mat-list-item></span>
+              <mat-icon>palette</mat-icon>
+              <span><mat-list-item>Appearance</mat-list-item></span>
+              <mat-icon>search</mat-icon>
+              <span><mat-list-item>Search Engine</mat-list-item></span>
+              <mat-icon>power_settings_new</mat-icon>
+              <span><mat-list-item>On startUp</mat-list-item></span>
+            </mat-list>
+    
+      </mat-sidenav>
+      <mat-sidenav-content>
+<mat-toolbar color="accent">
+<button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+<!-- <span><mat-icon>mood</mat-icon></span> -->
+
+<span> Material !</span>
+
+<button mat-icon-button [mat-menu-trigger-for]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu" xPosition="before" [overlapTrigger]="false">
+<button mat-menu-item  [routerLink]="['login']">
+  <mat-icon>home</mat-icon>
+  <span>Home</span>
+</button>
+<button mat-menu-item [routerLink]="['home']">
+  <mat-icon>group</mat-icon>
+  <span>Add/Edit Form</span>
+</button>
+</mat-menu>
+<!-- <router-outlet></router-outlet> -->
+    <app-department-listing></app-department-listing> 
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="footer">
+  <footer>@reactore</footer>
+</div>
+

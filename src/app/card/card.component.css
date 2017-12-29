@@ -1,0 +1,14 @@
+.example-header-image1 {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  .example-header-image2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQXRsC8tHm32Rv7yQTU3_AiH138sRt3RCZc-le1Ovq-t6uwZXR');
+    background-size: cover;
+  }
+  
+  .example-header-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQXRsC8tHm32Rv7yQTU3_AiH138sRt3RCZc-le1Ovq-t6uwZXR');
+    background-size: cover;
+  }

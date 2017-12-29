@@ -1,0 +1,61 @@
+<form  [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+<h1 mat-dialog-title  *ngIf="(data.id)==0">Add Department</h1>
+<h1 mat-dialog-title  *ngIf="(data.id)>0">Edit Department</h1>
+<div mat-dialog-content>
+  <p>Department Name</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name"  formControlName="name"> 
+  </mat-form-field>
+      <mat-error *ngIf="userForm.controls.name.hasError('required')">Please enter the Department name
+      </mat-error>
+      <mat-error *ngIf="userForm.controls.name.hasError('invalidPattern')">Invalid name
+      </mat-error>
+</div>
+<div mat-dialog-actions>
+  
+  <button   *ngIf="(data.id)==0" [disabled]="userForm.invalid" mat-raised-button color="primary" [mat-dialog-close]="data.name">Save</button>
+
+   <button  *ngIf="(data.id)>0" [disabled]="userForm.invalid" mat-raised-button color="primary"  [mat-dialog-close]="data">Update</button>
+
+  <button mat-raised-button color="warn" (click)="onNoClick()" >Cancel</button>
+</div>
+
+<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+
+<mat-horizontal-stepper [linear]="isLinear">
+  <mat-step [stepControl]="userForm">
+    <form [formGroup]="userForm">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="userForm">
+    <form [formGroup]="userForm">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-fab color="primary">
+          <mat-icon aria-label="Example icon-button with a heart icon">navigate_next</mat-icon>
+        </button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</form>
+<!-- "userForm.get('name').value" -->

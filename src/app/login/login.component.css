@@ -1,0 +1,11 @@
+mat-toolbar {
+    justify-content: space-between;
+  }
+  mat-sidenav {
+    width: 200px;
+  }
+  .footer{
+    padding:1em;
+    background-color:yellowgreen;
+    text-align: center;
+  }

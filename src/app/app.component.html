@@ -1,0 +1,46 @@
+
+<!-- <nav><a routerLink="/home" routerLinkActive="active"></a>
+</nav>
+<router-outlet></router-outlet> -->
+
+
+<mat-card class="mat-margin">
+<mat-card-header>
+  <mat-card-title class="title">
+    <strong>
+    SIGN IN
+    </strong>
+  </mat-card-title>
+</mat-card-header>
+<mat-card-content>
+  <form  [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput  placeholder="Username"  formControlName="username">  
+        <mat-error *ngIf="loginForm.controls.username.hasError('required')">Please enter the User name
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls.username.hasError('invalidPattern') && !loginForm.controls.passwrd.hasError('required')">Invalid name
+        </mat-error>
+     </mat-form-field>
+
+     <mat-form-field>
+      <input matInput placeholder="Password" formControlName="passwrd" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      <mat-error *ngIf="loginForm.controls.passwrd.hasError('required')">Please enter the password
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls.passwrd.hasError('invalidPattern') && !loginForm.controls.passwrd.hasError('required')">Invalid pattern
+        </mat-error>
+        <mat-error *ngIf="!flag">Invalid password
+          </mat-error>
+    </mat-form-field>
+    </div>
+
+    <button  mat-raised-button style="background-color:rgb(95, 243, 194);color:white;text-align:center;min-width:269px;">LOGIN</button>
+      </form>
+    
+</mat-card-content>
+
+</mat-card>
+
+<router-outlet></router-outlet>
