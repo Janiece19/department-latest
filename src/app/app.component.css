@@ -23,5 +23,15 @@ mat-card{
   font-size: 20px;
   
 }
+mat-grid-tile{
+/* background-image: url('https://picsum.photos/g/500/500'); */
+}
+mat-grid-list{
+  background-image: url('https://picsum.photos/2000/1000/?image=1051');
+  background-repeat:no-repeat;
+}
+.card{
+  background:none;
+}
 
 

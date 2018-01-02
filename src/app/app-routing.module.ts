@@ -10,7 +10,7 @@ export const routes: Routes = [
   { path: 'home', component: AppComponent },
   { path: 'login', component: LoginComponent },
   { path: 'login/home', component: CardComponent },
-  { path: 'login/login', component: LoginComponent },
+  // { path: 'login/login', component: LoginComponent },
   // { path: 'edit/:id', component: EditDeptComponent },
   // { path: 'view-detail', component: DepartmentDetailComponent },
   // { path: '**', component: PageNotFoundComponent }
